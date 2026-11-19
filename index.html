@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b2f5f">
+<meta name="description" content="Audencia Paris Campus student guide: explore campus floors and find the right student service.">
+<title>Audencia Student Guide | Paris Campus</title>
+<style>
+:root{--navy:#0b2f5f;--blue:#1d4ed8;--sky:#dff5fb;--ink:#10243b;--muted:#536579;--line:#dce5ee;--paper:#f5f8fc;--white:#fff;--gold:#f4c95d;--green:#147d54;--shadow:0 12px 32px rgba(11,47,95,.09)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+a{color:var(--blue)}button,input,select{font:inherit}button,a{touch-action:manipulation}:focus-visible{outline:3px solid #f2b705;outline-offset:3px;border-radius:6px}
+.skip{position:absolute;left:-9999px;top:8px;background:#fff;padding:10px;z-index:20}.skip:focus{left:8px}
+header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+.top{max-width:1160px;margin:auto;padding:13px 22px;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;color:var(--navy);text-decoration:none;font-weight:850;letter-spacing:-.03em}.mark{display:grid;place-items:center;width:42px;height:42px;background:var(--navy);color:#fff;border-radius:12px;font-weight:900}.brand small{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#55708c}
+nav{display:flex;gap:5px;flex-wrap:wrap}nav a{padding:9px 12px;text-decoration:none;color:var(--navy);font-size:14px;font-weight:700;border-radius:9px}nav a:hover,nav a[aria-current=page]{background:#eaf3ff}
+main{max-width:1160px;margin:auto;padding:26px 22px 60px}
+.hero{background:linear-gradient(120deg,#09294f,#104b83);color:#fff;border-radius:24px;padding:clamp(26px,5vw,54px);box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;width:330px;height:330px;border:1px solid #ffffff25;border-radius:50%;right:-90px;top:-110px;box-shadow:0 0 0 35px #ffffff0b,0 0 0 75px #ffffff08}
+.eyebrow{font-size:12px;letter-spacing:.15em;text-transform:uppercase;font-weight:800;color:#9be5f4;margin:0 0 10px}
+h1{font-size:clamp(30px,5vw,48px);line-height:1.08;letter-spacing:-.04em;margin:0 0 14px;max-width:760px}
+.hero p.lead{font-size:17px;color:#e2efff;max-width:670px;margin:0 0 24px}
+.searchline{display:flex;gap:10px;max-width:760px;flex-wrap:wrap;position:relative;z-index:1}
+.searchline input{flex:1 1 270px;min-width:0;padding:15px 16px;border:2px solid transparent;border-radius:12px;color:var(--ink);background:#fff}
+.btn{border:0;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 17px;border-radius:11px;background:var(--blue);color:#fff;text-decoration:none;font-weight:750;cursor:pointer}
+.btn:hover{filter:brightness(.94)}.btn.light{background:#fff;color:var(--navy)}.btn.outline{background:transparent;color:var(--navy);border:1.5px solid var(--navy)}.hero .btn{background:#82e0f0;color:#09294f}
+.hint{font-size:12px;color:#c8e5ff;margin-top:9px}
+section{scroll-margin-top:95px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:16px;margin:34px 0 15px;flex-wrap:wrap}
+h2{font-size:25px;letter-spacing:-.025em;color:var(--navy);margin:0}h3{font-size:18px;line-height:1.25;color:var(--navy);margin:0 0 7px}.muted{color:var(--muted);font-size:14px;margin:5px 0}
+.grid{display:grid;grid-template-columns:repeat( auto-fit,minmax(230px,1fr));gap:15px}
+.card{background:#fff;border:1px solid var(--line);border-radius:17px;padding:20px;box-shadow:0 3px 12px #0b2f5f08}
+.card p{margin:7px 0;color:#40546a;font-size:14px}.tag{display:inline-flex;padding:4px 9px;border-radius:99px;background:#e8f3ff;color:#164477;font-size:11px;font-weight:800;letter-spacing:.02em}.tag.verified{background:#e6f6ed;color:#126341}.tag.pending{background:#fff3d5;color:#825500}
+.cardlink{color:inherit;text-decoration:none}.cardlink:hover h3{text-decoration:underline}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}.toolbar input,.toolbar select{padding:11px 13px;border:1px solid #cbd7e3;border-radius:10px;background:#fff;min-width:220px}
+.floor{display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,1.1fr);gap:22px;align-items:center}
+.floor img{width:100%;height:auto;border:1px solid var(--line);border-radius:12px;background:#fff}
+.floor ul{padding-left:21px;margin:12px 0;color:#344a60}.floor li{margin:5px 0}
+.note{background:#fff7df;border:1px solid #f1d78b;color:#694d0b;padding:13px 15px;border-radius:12px;font-size:13px;margin-top:14px}
+.helpbox{background:#fff;border:1px solid var(--line);border-radius:17px;padding:22px;box-shadow:var(--shadow)}
+.choices{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin:15px 0}
+.choice{background:#fff;border:1.5px solid #cbd7e3;padding:14px;border-radius:12px;text-align:left;color:var(--navy);font-weight:700;cursor:pointer}
+.choice:hover,.choice[aria-pressed=true]{background:#edf5ff;border-color:var(--blue)}
+.result{margin-top:16px;padding:18px;border-radius:13px;background:#edf5ff;border:1px solid #c7dcf7}
+.result h3{margin-bottom:8px}
+.small{font-size:12px;color:var(--muted)}
+footer{background:#fff;border-top:1px solid var(--line);padding:24px 22px;color:#617286;font-size:12px}
+.foot{max-width:1160px;margin:auto;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.hidden{display:none!important}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:700px){.floor{grid-template-columns:1fr}.top{padding:10px 15px}main{padding:18px 15px 45px}nav{width:100%;overflow:auto}nav a{white-space:nowrap}.hero{border-radius:17px}.section-head{margin-top:28px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header><div class="top">
+<a class="brand" href="#home"><span class="mark" aria-hidden="true">A</span><span>Audencia <small>Student Guide · Paris Campus</small></span></a>
+<nav aria-label="Main navigation">
+<a href="#home">Home</a><a href="#directory">Services</a><a href="#campus">Campus floors</a><a href="#help">Who should I contact?</a>
+</nav>
+</div></header>
+<main id="main">
+<section class="hero" id="home" aria-labelledby="hero-title">
+<p class="eyebrow">Audencia · Saint-Ouen</p>
+<h1 id="hero-title">Find your way around campus.</h1>
+<p class="lead">One simple guide to campus facilities and student services. Search in English or French, explore the official floor plans, and work out who to contact.</p>
+<div class="searchline"><label class="sr-only" for="globalSearch">Search student services</label><input id="globalSearch" type="search" placeholder="Try “internship”, “stage”, “Wi-Fi” or “transcript”"><button class="btn" id="searchBtn">Search services →</button></div>
+<div class="hint">No account needed · Mobile-friendly · English and French keywords</div>
+</section>
+
+<section id="directory">
+<div class="section-head"><div><p class="eyebrow" style="color:#3973a9">01 / Student services</p><h2>Find the right service</h2><p class="muted">Search by the issue you need help with. Service descriptions are a student-guide directory, not verified university contact details.</p></div></div>
+<div class="toolbar"><label class="sr-only" for="serviceSearch">Filter services</label><input id="serviceSearch" type="search" placeholder="Search services or keywords…"><label class="sr-only" for="categoryFilter">Filter category</label><select id="categoryFilter"><option value="all">All service areas</option><option value="academic">Academic administration</option><option value="career">Career and internships</option><option value="student">Student life and wellbeing</option><option value="it">IT support</option></select></div>
+<div class="grid" id="serviceGrid" aria-live="polite"></div>
+<p class="note">Contact details, individual office locations and opening hours have not been confirmed in the supplied wayfinding plans. Ask campus reception or your programme team to confirm the correct contact. No placeholder email addresses are used in this guide.</p>
+</section>
+
+<section id="campus">
+<div class="section-head"><div><p class="eyebrow" style="color:#3973a9">02 / Official wayfinding</p><h2>Explore the campus floors</h2><p class="muted">The facilities below are transcribed from the Audencia wayfinding plans supplied for this project.</p></div><span class="tag verified">Source: supplied Audencia plans</span></div>
+<div class="card floor" style="margin-bottom:15px">
+<div><span class="tag verified">Ground floor</span><h3 style="margin-top:10px">Learning, events and reception-level facilities</h3><ul><li>Classrooms</li><li>Event space</li><li>Auditorium</li><li>Fitness room</li><li>Commercial and admissions offices</li><li>Meeting rooms</li><li>Medical room</li><li>Atrium</li></ul><p class="small">Wayfinding plan: Ground Floor.</p></div>
+<img src="assets/wayfinding-ground-floor.png" alt="Audencia official ground-floor wayfinding plan showing the floor layout and facility categories">
+</div>
+<div class="card floor" style="margin-bottom:15px">
+<div><span class="tag verified">Lower ground floor</span><h3 style="margin-top:10px">Student spaces and facilities</h3><ul><li>Student lounge</li><li>Student associations’ offices</li><li>Student bicycle parking</li><li>Technical rooms</li><li>Outdoor garden</li><li>Shower</li></ul></div>
+<img src="assets/wayfinding-lower-levels.png" alt="Audencia wayfinding plan image showing the lower ground floor and basement levels">
+</div>
+<div class="grid">
+<article class="card"><span class="tag verified">Basement −1</span><h3 style="margin-top:9px">Parking and storage</h3><ul><li>Car park</li><li>Staff bicycle parking</li><li>Technical rooms</li><li>Storage areas</li></ul></article>
+<article class="card"><span class="tag verified">Basement −2</span><h3 style="margin-top:9px">Parking and technical facilities</h3><ul><li>Car park</li><li>Technical rooms</li></ul></article>
+</div>
+<p class="note">The plans identify facilities by floor and use colour-coded areas. They do not establish a verified room number for every student service. The guide therefore does not invent room assignments.</p>
+</section>
+
+<section id="help">
+<div class="section-head"><div><p class="eyebrow" style="color:#3973a9">03 / Guided help</p><h2>Who should I contact?</h2><p class="muted">Choose the situation closest to yours to get a suggested starting point.</p></div></div>
+<div class="helpbox"><strong>What do you need help with?</strong><div class="choices" id="helpChoices"></div><div id="helpResult" aria-live="polite"><p class="muted">Select an option above to see a recommendation.</p></div></div>
+</section>
+
+<section id="about">
+<div class="section-head"><div><p class="eyebrow" style="color:#3973a9">04 / About this prototype</p><h2>Designed around student needs</h2></div></div>
+<div class="grid">
+<article class="card"><h3>Less searching</h3><p>Bring common student questions and campus information together in one place.</p></article>
+<article class="card"><h3>More inclusive access</h3><p>Responsive layout, keyboard navigation, clear labels, readable contrast and reduced-motion support.</p></article>
+<article class="card"><h3>Trustworthy information</h3><p>Show the difference between plan-confirmed facilities and service details that still need university confirmation.</p></article>
+</div>
+</section>
+</main>
+<footer><div class="foot"><span><strong>Audencia Student Guide</strong> · Student project prototype · Paris Campus, Saint-Ouen</span><span>Campus facility descriptions are based on the wayfinding plans supplied for this project. Confirm service contacts with Audencia.</span></div></footer>
+<script>
+const services=[
+{id:"internships",name:"Internship & Work-Study Services",fr:"Stages et alternance",category:"career",keywords:"internship stage alternance apprenticeship contract convention employer placement",desc:"Starting point for questions about internship agreements, work-study contracts and company placements.",route:"Ask the internship or programme team which office handles agreements and placement questions."},
+{id:"career",name:"Career Guidance & Employment Support",fr:"Orientation et insertion professionnelle",category:"career",keywords:"career cv resume job interview emploi recrutement coaching",desc:"Starting point for career planning, CV feedback, interview preparation and recruitment questions.",route:"Ask your programme team or student services how to access career guidance and CV support."},
+{id:"academic",name:"Academic Administration & Records",fr:"Scolarité",category:"academic",keywords:"grades transcript notes relevé attestation certificate diploma enrolment inscription ects attendance",desc:"Starting point for enrolment, transcripts, grades, attendance records and official academic certificates.",route:"Contact your programme coordinator or campus reception and ask for the academic administration team."},
+{id:"student",name:"Student Life & Wellbeing",fr:"Vie étudiante",category:"student",keywords:"wellbeing wellbeing stress accessibility disability housing logement accommodation clubs associations",desc:"Starting point for student life, associations, housing questions, wellbeing and accessibility arrangements.",route:"Ask student services or campus reception to direct you to the appropriate student-life contact. For urgent medical emergencies, use local emergency services."},
+{id:"it",name:"IT & Digital Services",fr:"Informatique",category:"it",keywords:"wifi wi-fi password login account computer laptop printer software vpn internet",desc:"Starting point for campus Wi-Fi, account access, software, printing and technical issues.",route:"Ask campus reception or your programme team for the current IT helpdesk contact and support channel."}
+];
+const topics=[
+["An internship or work-study contract","internships","Internship & Work-Study Services is the most relevant starting point for placement and agreement questions."],
+["Career advice, my CV or an interview","career","Career guidance is the most relevant starting point for CV and interview support."],
+["My grades, transcript or enrolment","academic","Academic administration handles official records and enrolment matters."],
+["Wellbeing, accessibility, housing or clubs","student","Student Life & Wellbeing is the most relevant starting point for student support."],
+["Wi-Fi, password or software problem","it","IT support is the most relevant starting point for technical problems."],
+["Something else / I am not sure","", "If you are unsure, start with campus reception or your programme coordinator. They can direct you to the right team."]
+];
+const grid=document.getElementById("serviceGrid");
+function renderServices(){
+ const q=document.getElementById("serviceSearch").value.toLowerCase().trim(),cat=document.getElementById("categoryFilter").value;
+ const list=services.filter(s=>(cat==="all"||s.category===cat)&&(!q||[s.name,s.fr,s.desc,s.keywords].join(" ").toLowerCase().includes(q)));
+ grid.innerHTML=list.length?list.map(s=>`<article class="card"><span class="tag">${s.category==="career"?"Career":s.category==="academic"?"Academic":s.category==="student"?"Student life":"IT support"}</span><h3 style="margin-top:10px">${s.name}</h3><p><em>${s.fr}</em></p><p>${s.desc}</p><button class="btn outline" type="button" data-topic="${s.id}">How can I get help? →</button></article>`).join(""):`<article class="card"><h3>No matching service</h3><p>Try another keyword or use the guided help tool.</p></article>`;
+ grid.querySelectorAll("[data-topic]").forEach(b=>b.addEventListener("click",()=>{const s=services.find(x=>x.id===b.dataset.topic);showResult(s.id);document.getElementById("help").scrollIntoView();}));
+}
+document.getElementById("serviceSearch").addEventListener("input",renderServices);
+document.getElementById("categoryFilter").addEventListener("change",renderServices);
+document.getElementById("globalSearch").addEventListener("keydown",e=>{if(e.key==="Enter")runSearch()});
+document.getElementById("searchBtn").addEventListener("click",runSearch);
+function runSearch(){const q=document.getElementById("globalSearch").value;document.getElementById("serviceSearch").value=q;renderServices();document.getElementById("directory").scrollIntoView();}
+function showResult(id){const s=services.find(x=>x.id===id);const topic=topics.find(x=>x[1]===id);document.getElementById("helpResult").innerHTML=`<div class="result"><span class="tag">Suggested starting point</span><h3>${s?s.name:"Campus reception / programme coordinator"}</h3><p>${topic?topic[2]:s.route}</p><p><strong>Next step:</strong> ${s?s.route:"Explain your question to reception or your programme coordinator and ask them to identify the correct team."}</p><p class="small">This is guidance, not a verified direct contact. Confirm the current email, office and opening hours with Audencia.</p></div>`;}
+const choices=document.getElementById("helpChoices");
+topics.forEach(t=>{const b=document.createElement("button");b.className="choice";b.type="button";b.textContent=t[0];b.setAttribute("aria-pressed","false");b.addEventListener("click",()=>{choices.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed","false"));b.setAttribute("aria-pressed","true");showResult(t[1]);});choices.appendChild(b);});
+renderServices();
+</script>
+</body>
+</html>
